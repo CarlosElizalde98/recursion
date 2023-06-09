@@ -144,4 +144,45 @@ describe('#Find method', () => {
 
     expect(result).toBe(1);
   });
+
+  test('returns null if index is not found', () => {
+    const ll = LinkedList.fromValues(10, 20, 30);
+    const result = ll.find(40);
+    expect(result).toBeNull();
+  });
+});
+
+describe('#removeAt function', () => {
+  describe('With index less than 0', () => {
+    test('It returns null', () => {
+      const ll = LinkedList.fromValues(10, 20, 30);
+      const result = ll.removeAtIndex(-1);
+
+      expect(result).toBeNull();
+    });
+  });
+
+  describe('With index greater than length', () => {
+    test('it returns null', () => {
+      const ll = LinkedList.fromValues(10, 20);
+
+      expect(ll.removeAtIndex(5)).toBeNull();
+    });
+  });
+
+  describe('with index 0', () => {
+    test('it returns the head', () => {
+      const ll = LinkedList.fromValues(10, 20);
+      ll.removeAtIndex(0);
+      expect(ll.head.value).toBe(20);
+    });
+  });
+
+  describe('with index in the middle', () => {
+    test('it returns the middle', () => {
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
+      ll.removeAtIndex(2);
+      expect(ll.getAtIndex(2).value).toBe(40);
+    });
+  });
 });

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686323513122" clover="3.2.0">
-  <project timestamp="1686323513122" name="All files">
-    <metrics statements="55" coveredstatements="48" conditionals="14" coveredconditionals="14" methods="14" coveredmethods="12" elements="83" coveredelements="74" complexity="0" loc="55" ncloc="55" packages="1" files="1" classes="1"/>
+<coverage generated="1686324254690" clover="3.2.0">
+  <project timestamp="1686324254690" name="All files">
+    <metrics statements="64" coveredstatements="57" conditionals="20" coveredconditionals="20" methods="15" coveredmethods="13" elements="99" coveredelements="90" complexity="0" loc="64" ncloc="64" packages="1" files="1" classes="1"/>
     <file name="linked-list.js" path="/home/coelizalde/Downloads/Web Development/Odin-Project/linkedlists/recursion/linked-lists/src/linked-list.js">
-      <metrics statements="55" coveredstatements="48" conditionals="14" coveredconditionals="14" methods="14" coveredmethods="12"/>
-      <line num="3" count="17" type="stmt"/>
-      <line num="4" count="17" type="stmt"/>
-      <line num="8" count="43" type="stmt"/>
-      <line num="9" count="43" type="stmt"/>
-      <line num="10" count="43" type="stmt"/>
+      <metrics statements="64" coveredstatements="57" conditionals="20" coveredconditionals="20" methods="15" coveredmethods="13"/>
+      <line num="3" count="19" type="stmt"/>
+      <line num="4" count="19" type="stmt"/>
+      <line num="8" count="49" type="stmt"/>
+      <line num="9" count="49" type="stmt"/>
+      <line num="10" count="49" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
@@ -45,20 +45,29 @@
       <line num="80" count="0" type="stmt"/>
       <line num="81" count="0" type="stmt"/>
       <line num="83" count="0" type="stmt"/>
-      <line num="87" count="2" type="stmt"/>
-      <line num="89" count="2" type="stmt"/>
-      <line num="90" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="91" count="1" type="stmt"/>
-      <line num="93" count="5" type="stmt"/>
-      <line num="95" count="1" type="stmt"/>
-      <line num="101" count="45" type="stmt"/>
-      <line num="102" count="45" type="stmt"/>
+      <line num="87" count="4" type="stmt"/>
+      <line num="89" count="4" type="stmt"/>
+      <line num="90" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="91" count="2" type="stmt"/>
+      <line num="93" count="9" type="stmt"/>
+      <line num="95" count="2" type="stmt"/>
+      <line num="99" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="100" count="1" type="stmt"/>
+      <line num="101" count="1" type="stmt"/>
+      <line num="102" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="103" count="2" type="stmt"/>
+      <line num="104" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="105" count="1" type="stmt"/>
       <line num="107" count="1" type="stmt"/>
-      <line num="108" count="14" type="stmt"/>
-      <line num="109" count="14" type="stmt"/>
-      <line num="110" count="40" type="stmt"/>
-      <line num="112" count="14" type="stmt"/>
-      <line num="115" count="1" type="stmt"/>
+      <line num="110" count="1" type="stmt"/>
+      <line num="116" count="51" type="stmt"/>
+      <line num="117" count="51" type="stmt"/>
+      <line num="122" count="1" type="stmt"/>
+      <line num="123" count="16" type="stmt"/>
+      <line num="124" count="16" type="stmt"/>
+      <line num="125" count="46" type="stmt"/>
+      <line num="127" count="16" type="stmt"/>
+      <line num="130" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
