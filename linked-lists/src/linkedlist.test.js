@@ -46,3 +46,36 @@ describe('#Get At index', () => {
     });
   });
 });
+
+describe('#Size', () => {
+  test('It returns 0 if list is empty', () => {
+    const ll = new LinkedList();
+    expect(ll.size()).toBe(0);
+  });
+
+  test('it returns the correct size of list', () => {
+    const ll = LinkedList.fromValues(10, 20, 30);
+    expect(ll.size()).toBe(3);
+  });
+});
+
+describe('#Append', () => {
+  test('It adds element to end of list', () => {
+    const ll = LinkedList.fromValues(10, 20);
+    ll.append(30);
+    expect(ll.tail().value).toBe(30);
+  });
+});
+
+describe('#Insert at Index', () => {
+  test('it adds to head correctly', () => {
+    const ll = LinkedList.fromValues(20, 30, 40);
+    ll.insertAtIndex(0, 10);
+    expect(ll.head.value).toBe(10);
+  });
+  test('It returns null if index is negative', () => {
+    const ll = LinkedList.fromValues(10, 20, 30);
+    const result = ll.insertAtIndex(-1, 40);
+    expect(result).toBeNull();
+  });
+});

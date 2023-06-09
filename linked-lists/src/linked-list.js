@@ -12,7 +12,7 @@ class LinkedList {
 
   append(data) {
     let oldTail = this.tail();
-    let newTail = new Node(data);
+    let newTail = new Node(data, null);
     oldTail.nextNode = newTail;
   }
 
@@ -44,11 +44,25 @@ class LinkedList {
     return current;
   }
 
+  insertAtIndex(index, value) {
+    if (index === 0) {
+      return this.prepend(value);
+    }
+
+    const prev = this.getAtIndex(index - 1);
+    if (prev == null) {
+      return null;
+    }
+
+    prev.next = new Node(value, prev.next);
+    this.length++;
+  }
+
   toString() {
     let output = ``;
     let current = this.head;
     while (current) {
-      let output = `${output}${current.value} ->`;
+      let output = `${output}${current.value} -> `;
       current = current.nextNode;
     }
     console.log(`${output} null`);
