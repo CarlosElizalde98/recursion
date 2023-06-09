@@ -54,8 +54,23 @@ class LinkedList {
       return null;
     }
 
-    prev.next = new Node(value, prev.next);
+    prev.nextNode = new Node(value, prev.nextNode);
     this.length++;
+  }
+
+  removeHead() {
+    this.head = this.head.nextNode;
+    this.length--;
+  }
+
+  pop() {
+    if (this.length == 1) this.removeHead();
+    let position = this.getAtIndex(this.length - 2);
+    if (position !== null) {
+      position.nextNode = null;
+      this.length--;
+    }
+    return null;
   }
 
   toString() {
@@ -66,6 +81,18 @@ class LinkedList {
       current = current.nextNode;
     }
     console.log(`${output} null`);
+  }
+
+  contains(value) {
+    let current = this.head;
+
+    while (current) {
+      if (current.value === value) {
+        return true;
+      }
+      current = current.nextNode;
+    }
+    return false;
   }
 }
 
