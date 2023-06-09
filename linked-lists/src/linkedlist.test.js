@@ -171,7 +171,7 @@ describe('#removeAt function', () => {
   });
 
   describe('with index 0', () => {
-    test('it returns the head', () => {
+    test('it removes the head', () => {
       const ll = LinkedList.fromValues(10, 20);
       ll.removeAtIndex(0);
       expect(ll.head.value).toBe(20);
@@ -179,7 +179,7 @@ describe('#removeAt function', () => {
   });
 
   describe('with index in the middle', () => {
-    test('it returns the middle', () => {
+    test('it removes the middle', () => {
       const ll = LinkedList.fromValues(10, 20, 30, 40);
       ll.removeAtIndex(2);
       expect(ll.getAtIndex(2).value).toBe(40);

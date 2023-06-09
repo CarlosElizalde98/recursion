@@ -58,6 +58,15 @@ class LinkedList {
     this.length++;
   }
 
+  removeAtIndex(index) {
+    if (index === 0) this.removeHead();
+
+    const prev = this.getAtIndex(index - 1);
+    if (prev == null) return null;
+    prev.nextNode = prev.nextNode.nextNode;
+    this.length--;
+  }
+
   removeHead() {
     this.head = this.head.nextNode;
     this.length--;
