@@ -7,7 +7,7 @@ class LinkedList {
   prepend(data) {
     const newNode = new Node(data, this.head);
     this.head = newNode;
-    length++;
+    this.length++;
   }
 
   append(data) {
@@ -56,8 +56,10 @@ class LinkedList {
 }
 
 class Node {
-  constructor(value, nextNode = null) {
+  constructor(value, nextNode) {
     this.value = value;
     this.nextNode = nextNode;
   }
 }
+
+module.exports = LinkedList;
