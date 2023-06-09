@@ -62,4 +62,13 @@ class Node {
   }
 }
 
+//Helper function
+LinkedList.fromValues = function (...values) {
+  const ll = new LinkedList();
+  for (let i = values.length - 1; i >= 0; i--) {
+    ll.prepend(values[i]);
+  }
+  return ll;
+};
+
 module.exports = LinkedList;

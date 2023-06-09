@@ -12,3 +12,37 @@ describe('#Prepend element', () => {
     expect(ll.length).toBe(2);
   });
 });
+
+describe('#Get At index', () => {
+  describe('With index less than 0', () => {
+    test('it returns null', () => {
+      const ll = LinkedList.fromValues(10, 20);
+
+      expect(ll.getAtIndex(-1)).toBeNull();
+    });
+  });
+
+  describe('With index greater than length', () => {
+    test('it returns null', () => {
+      const ll = LinkedList.fromValues(10, 20);
+
+      expect(ll.getAtIndex(5)).toBeNull();
+    });
+  });
+
+  describe('with index 0', () => {
+    test('it returns the head', () => {
+      const ll = LinkedList.fromValues(10, 20);
+
+      expect(ll.getAtIndex(0).value).toBe(10);
+    });
+  });
+
+  describe('with index in the middle', () => {
+    test('it returns the middle', () => {
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
+
+      expect(ll.getAtIndex(2).value).toBe(30);
+    });
+  });
+});
